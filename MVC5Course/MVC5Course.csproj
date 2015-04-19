@@ -216,6 +216,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Faribes.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\getAllProducts_Result.cs">
+      <DependentUpon>Faribes.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LoginVM.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
