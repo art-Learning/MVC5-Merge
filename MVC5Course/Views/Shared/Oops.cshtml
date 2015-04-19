@@ -1,0 +1,10 @@
+﻿@{
+    var allErrors = new List<string>();
+    allErrors = ViewBag.Errors;
+    <ol>
+        @foreach (var item in allErrors)
+        {
+        <li>@item</li>
+        }
+    </ol>
+}

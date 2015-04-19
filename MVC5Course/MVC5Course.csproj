@@ -244,6 +244,7 @@
     <Content Include="App_Data\Fabrics_log.ldf">
       <DependentUpon>Fabrics.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\988917_10206681224099560_8171043119351995771_n.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -337,6 +338,7 @@
     <Content Include="Views\Clients\LoginResult.cshtml" />
     <Content Include="Views\CRUD\Index.cshtml" />
     <Content Include="Views\CRUD\Create.cshtml" />
+    <Content Include="Views\Shared\Oops.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
@@ -381,7 +383,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>10681</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:80/</IISUrl>
+          <IISUrl>http://localhost:12345/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

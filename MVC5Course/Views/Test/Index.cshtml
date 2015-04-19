@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "課程補充資訊";
 }
 
@@ -25,6 +24,47 @@
             <li><a href="https://msdn.microsoft.com/zh-tw/library/bb397687.aspx">Lambda 運算式 (C# 程式設計手冊)</a></li>
             <li><a href="http://www.dotblogs.com.tw/hatelove/archive/2012/06/07/csharp-linq-lambda-introduction.aspx">[.NET]快快樂樂學LINQ系列前哨戰－Lambda的簡介</a></li>
         </ol>
+
+        偵錯
+        <div class="col-md-6">
+            <pre>處裡 Entity Framework 發生驗證失敗的程式碼範例
+        try {
+            db.SaveChanges();
+        }
+        catch (DbEntityValidationException ex){
+            //throw ex;
+            var allErrors = new List<string>();
+            foreach (DbEntityValidationResult re in ex.EntityValidationErrors){
+                foreach (DbValidationError err in re.ValidationErrors){
+                    allErrors.Add(err.ErrorMessage);
+                }
+            }
+            ViewBag.Errors = allErrors;
+        }</pre>
+            <pre>取得第一個錯誤:
+ex.EntityValidationErrors.First().ValidationErrors.First().ErrorMessage
+三種常見的型別與其命名空間：
+System.Data.Entity.Validation.DbEntityValidationException
+System.Data.Entity.Validation.DbEntityValidationResult
+System.Data.Entity.Validation.DbValidationError
+ex.EntityValidationErrors
+代表有多少 Entity 屬性有驗證錯誤
+ex.EntityValidationErrors.First().ValidationErrors
+代表在「特定屬性」中有多少驗證錯誤</pre>
+
+            IEnumerable與 IQueryable
+            <ol>
+                <li><a href="http://blog.miniasp.com/post/2010/03/29/LINQ-to-SQL-Performance-Impact-on-N-Tier-Architecture.aspx">解決 N-Tier 多層架構設計下 LINQ to SQL 效能不彰的問題</a></li>
+            </ol>
+
+        </div>
+
+        <div class="col-md-6">
+            <img src="~/Content/988917_10206681224099560_8171043119351995771_n.jpg" />
+        </div>
     </div>
+
+
+
 </div>
 
