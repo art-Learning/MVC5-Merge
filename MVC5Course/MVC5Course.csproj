@@ -240,10 +240,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Fabrics.mdf" />
-    <Content Include="App_Data\Fabrics_log.ldf">
-      <DependentUpon>Fabrics.mdf</DependentUpon>
-    </Content>
+    <Content Include="Content\11150150_10206681668750676_1930910430777302713_n.jpg" />
+    <Content Include="Content\11164806_10206681666950631_7497212806687361037_n.jpg" />
     <Content Include="Content\988917_10206681224099560_8171043119351995771_n.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -364,7 +362,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
