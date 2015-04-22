@@ -1,0 +1,118 @@
+﻿<h3>0900 <small>監看式、中斷點</small></h3>
+<b>監看式</b>
+<ul>
+    <li>監看式(DataTips)：固定在來源</li>
+    <li>可將資料匯出成XML，因此可針對不同偵錯情境，使用不同的DataTips</li>
+    <li>偵錯過程才可加入DataTips</li>
+</ul>
+<h3>1000 <small>伺服器總管、SQL Server物件總管</small></h3>
+<b>伺服器總管</b>
+<ul>
+    <li>掛載資料庫於APP_DATA資料夾內，直接以拖曳方式，或是加入現有項目選擇MDF檔案。</li>
+    <li>
+        篩選資料後可產生insert into的TSQL語法
+        <ol>
+            <li>從【伺服器總管】內選擇某資料表</li>
+            <li>右鍵選擇【顯示資料表資料】</li>
+            <li>選擇上方像漏斗的ICON【Sort and fliter DataSet】</li>
+            <li>依據需求在各欄位後方的Fliter欄位輸入篩選條件</li>
+            <li>點選上方像羊皮紙的ICON【Script】</li>
+            <li>最終產生的就是Insert Into的語法</li>
+        </ol>
+    </li>
+    <li>可點選【屬性】-->【連接字串】查詢連接字串</li>
+</ul>
+<b>SQL Server物件總管</b>
+<ul>
+    <li>結構描述比較，指定來源(新)與目標(舊)進行比較後，產生指令碼</li>
+</ul>
+<b>資料庫Schema版控</b>
+<ul>
+    <li>新增專案</li>
+    <li>SQL Server資料庫專案</li>
+    <li>匯入-->資料庫</li>
+    <li>取得DDL純文字檔的Script</li>
+    <li>透過版本控管機制進行版控</li>
+</ul>
+<h3>1100<small>工作清單、中斷點、程式碼片段、快速鍵</small></h3>
+<b>工作清單</b>
+<ul>
+    <li>自動工作清單：於註解加上TODO字樣</li>
+    <li>相關的關鍵字可於【工具】-->【選項】-->【工作清單】內進行設定，但建議不變更，避免團隊其他成員看不到</li>
+</ul>
+<b>中斷點</b>
+<ul>
+    <li>中斷點可進行條件設定</li>
+    <li>中斷點條件內容，可撰寫C#語法</li>
+</ul>
+<b>程式碼片段</b>
+<ul>
+    <li>建構式：ctor</li>
+    <li>屬性：prop</li>
+    <li>完整屬性：propfull</li>
+</ul>
+<b>快速鍵</b>
+<ul>
+    <li>目前視窗全螢幕切換：Shift+Alt+Enter</li>
+    <li>鍵盤快速鍵設定：建議採用C#2005配置。【工具】-->【環境】-->【鍵盤】</li>
+    <li>重新開啟Intellisense：Ctrl+J</li>
+    <li>搜尋關鍵字功能：Ctrl+，</li>
+    <li>移至定義：F12</li>
+    <li>返回：Ctrl+-</li>
+    <li>團隊設定檔內的優先權會比個人設定檔高，可藉此規範開發團隊的VS設定</li>
+</ul>
+<h3>1310 <small>Browser Link、VS Command</small></h3>
+<b>Browser Link</b>
+<ul>
+    <li>VS2013的擴充套件：Web Essentials 2013，必備</li>
+    <li>安裝後按CTRL+F5把網站跑起來，單擊Ctrl可顯示Web Essentials的功能列</li>
+    <li>Design Mode：可直接於瀏覽器修改後同步至VS2013</li>
+    <li>Inspect Mode：可選取前端的文字或物件，VS2013會直接顯示該段程式碼</li>
+</ul>
+<b>VS Command</b>
+<ul>
+    <li>找檔案很方便，於IDE內程式碼的頁籤右鍵【Locate In Soulution Explorer】可直接在方案總管內顯示該檔案</li>
+</ul>
+<h3>1400 <small>Web Form、MVC</small></h3>
+<ul>
+    <li>Web Form與MVC的底層都是ASP.NET</li>
+    <li>可由【工具】-->【選項】-->【原始檔控制】選擇使用GIT或TFS進行版控</li>
+</ul>
+
+<h3>1430<small>新建專案練習</small></h3>
+<ul>
+    <li>Controller新增練習</li>
+    <li>View新增練習</li>
+    <li>Model新增練習</li>
+    <li>若有加入資料庫於專案內，須將資料庫從專案中移除，避免版控到DB發生錯誤</li>
+</ul>
+<b>EDMX的實作(實體資料模型的XML簡稱EDMX)</b>
+<ul>
+    <li>加入新項目：ADO.NET實體資料模型-->資料來源選擇【來自資料庫】(DB First)</li>
+</ul>
+<h3>1600<small>觀念說明</small></h3>
+<ul>
+    <li>WebForm與MVC差異</li>
+    <li>
+        Model要肥
+        <ol>
+            <li>資料存取、驗證</li>
+            <li>商業邏輯</li>
+        </ol>
+    </li>
+    <li>
+        View要笨
+        <ol>
+            <li>前端呈現</li>
+        </ol>
+    </li>
+    <li>
+        Controller要輕
+        <ol>
+            <li>接表單(輸入)</li>
+            <li>控制流程</li>
+            <li>導向VIEW(輸出)</li>
+        </ol>
+    </li>
+</ul>
+<h3>1730</h3>

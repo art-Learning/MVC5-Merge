@@ -188,6 +188,7 @@
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\ExtraInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\PracticeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -320,6 +321,9 @@
     <Content Include="Views\ExtraInfo\ExtraInfoDay1.cshtml" />
     <Content Include="Views\Practice\Index.cshtml" />
     <Content Include="Views\Topic\Index.cshtml" />
+    <Content Include="Views\Note\Index.cshtml" />
+    <Content Include="Views\Note\Day1.cshtml" />
+    <Content Include="Views\Note\Day2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
