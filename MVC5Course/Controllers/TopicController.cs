@@ -4,9 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MVC5Course.Controllers {
-    public class HomeController : Controller {
-        public ActionResult Index() {
+namespace MVC5Course.Controllers
+{
+    public class TopicController : Controller
+    {
+        // GET: Topic
+        public ActionResult Index()
+        {
             return View();
         }
     }

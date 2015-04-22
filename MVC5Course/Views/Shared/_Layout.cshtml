@@ -22,13 +22,11 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("首頁", "Index", "Home")</li>
-                    <li>@Html.ActionLink("課程主題", "About", "Home")</li>
-                    <li>@Html.ActionLink("課程練習", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("個人資料", "Profile", "Home")</li>
-                    <li>@Html.ActionLink("課程補充資訊", "Index", "Test")</li>
+                    <li>@Html.ActionLink("課程主題", "Index", "Topic")</li>
+                    <li>@Html.ActionLink("課程練習", "Index", "Practice")</li>
+                    <li>@Html.ActionLink("課程補充資訊", "Index", "ExtraInfo")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
