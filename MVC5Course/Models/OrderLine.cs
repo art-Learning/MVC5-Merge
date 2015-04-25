@@ -11,12 +11,14 @@ namespace MVC5Course.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class OrderLine
     {
         public int OrderId { get; set; }
         public int LineNumber { get; set; }
         public int ProductId { get; set; }
+        [NumberCheck(ErrorMessage="請輸入偶數")]
         public decimal Qty { get; set; }
         public decimal LineTotal { get; set; }
     

@@ -188,6 +188,7 @@
     <Compile Include="Controllers\CRUDController.cs" />
     <Compile Include="Controllers\ExtraInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\jQueryController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\PracticeController.cs" />
@@ -240,6 +241,7 @@
       <DependentUpon>IRepository.EF6.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginVM.cs" />
+    <Compile Include="Models\NumberCheckAttribute.cs" />
     <Compile Include="Models\Occupation.cs">
       <DependentUpon>Fabrics.tt</DependentUpon>
     </Compile>
@@ -388,6 +390,8 @@
     <Content Include="Views\ExtraInfo\Index.cshtml" />
     <Content Include="Views\Practice\Index.cshtml" />
     <Content Include="Views\Note\Day3.cshtml" />
+    <Content Include="Views\jQuery\Index.cshtml" />
+    <Content Include="Views\jQuery\each.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
