@@ -19,6 +19,10 @@ namespace MVC5Course.Controllers
             return View();
         }
 #endif
+        public ActionResult showAlert()
+        {
+            return PartialView("AlertRedirect");
+        }
     }
 
 }

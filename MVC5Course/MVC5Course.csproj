@@ -394,6 +394,7 @@
     <Content Include="Views\jQuery\Index.cshtml" />
     <Content Include="Views\jQuery\each.cshtml" />
     <Content Include="Views\Shared\Debug.cshtml" />
+    <Content Include="Views\Shared\AlertRedirect.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
