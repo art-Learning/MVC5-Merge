@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MVC5Course.Controllers
 {
-    public class TopicController : Controller
+    public class TopicController : BaseController
     {
         // GET: Topic
         public ActionResult Index()
