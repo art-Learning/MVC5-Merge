@@ -197,7 +197,36 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Client.cs">
-      <DependentUpon>Faribes.tt</DependentUpon>
+      <DependentUpon>Fabrics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClientRepository.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFRepository.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFUnitOfWork.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fabrics.Context.cs" />
+    <Compile Include="Models\Fabrics.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fabrics.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fabrics.cs" />
+    <Compile Include="Models\Fabrics.Designer.cs">
+      <DependentUpon>Fabrics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fabrics1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fabrics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fabrics1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fabrics.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Faribes.Context.cs">
       <AutoGen>True</AutoGen>
@@ -217,18 +246,48 @@
     <Compile Include="Models\getAllProducts_Result.cs">
       <DependentUpon>Faribes.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\IRepository.EF6.cs" />
+    <Compile Include="Models\IRepository.EF61.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IUnitOfWork.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\LoginVM.cs" />
     <Compile Include="Models\Occupation.cs">
-      <DependentUpon>Faribes.tt</DependentUpon>
+      <DependentUpon>Fabrics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OccupationRepository.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs">
-      <DependentUpon>Faribes.tt</DependentUpon>
+      <DependentUpon>Fabrics.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderLine.cs">
-      <DependentUpon>Faribes.tt</DependentUpon>
+      <DependentUpon>Fabrics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderLineRepository.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderRepository.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
-      <DependentUpon>Faribes.tt</DependentUpon>
+      <DependentUpon>Fabrics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductRepository.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\QueryProduct_Result.cs">
+      <DependentUpon>Fabrics.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RepositoryHelper.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RepositoryIQueryableExtensions.cs">
+      <DependentUpon>IRepository.EF6.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource1.Designer.cs">
@@ -270,6 +329,25 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Faribes.edmx</DependentUpon>
       <LastGenOutput>Faribes.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Fabrics.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Fabrics.Context1.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="Models\Fabrics.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Fabrics1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Fabrics.edmx.diagram">
+      <DependentUpon>Fabrics.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Fabrics.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Fabrics1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\IRepository.EF6.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IRepository.EF61.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.11.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.2.js" />

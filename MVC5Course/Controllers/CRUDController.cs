@@ -6,23 +6,27 @@ using System.Web.Mvc;
 using MVC5Course.Models;
 using System.Data.Entity.Validation;
 
-namespace MVC5Course.Controllers {
-    public class CRUDController : Controller {
+namespace MVC5Course.Controllers
+{
+    public class CRUDController : Controller
+    {
         FabricsEntities db = new FabricsEntities();
 
         // GET: CRUD
-        public ActionResult Index(string keyword, int limit = 10) {
-            var data = db.Product.AsQueryable();
+        public ActionResult Index(string keyword, int limit = 10)
+        {
+            //var data = db.Product.AsQueryable();
 
-            if (!String.IsNullOrEmpty(keyword)) {
-                data = data.Where(p => p.ProductName.StartsWith(keyword));
-            }
+            //if (!String.IsNullOrEmpty(keyword))
+            //{
+            //    data = data.Where(p => p.ProductName.StartsWith(keyword));
+            //}
 
-            data = data.Take(limit);
+            //data = data.Take(limit);
 
             //var data = db.Database.SqlQuery<Product>("SELECT TOP " + limit + " * FROM dbo.Product WHERE ProductName like @p0", keyword + "%").AsQueryable();
 
-            //var data = db.QueryProduct().AsQueryable();
+            var data = db.QueryProduct().AsQueryable();
 
             ViewBag.keyword = keyword;
 
@@ -30,7 +34,8 @@ namespace MVC5Course.Controllers {
         }
 
         // GET: CRUD/Details/5
-        public ActionResult Details(int id) {
+        public ActionResult Details(int id)
+        {
             //Product p = db.Product.Find(id);
             //Product p = db.Product.Where(x => x.ProductId == id);
             Product p = db.Product.First(x => x.ProductId == id);
@@ -39,14 +44,17 @@ namespace MVC5Course.Controllers {
         }
 
         // GET: CRUD/Create
-        public ActionResult Create() {
+        public ActionResult Create()
+        {
             return View();
         }
 
         // POST: CRUD/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection) {
-            try {
+        public ActionResult Create(FormCollection collection)
+        {
+            try
+            {
                 Product prod = new Product();
 
                 prod.ProductName = collection["ProductName"];
@@ -59,22 +67,27 @@ namespace MVC5Course.Controllers {
 
                 return RedirectToAction("Index");
             }
-            catch {
+            catch
+            {
                 return View();
             }
         }
 
-        public ActionResult BatchUpdate() {
+        public ActionResult BatchUpdate()
+        {
             var data = db.Product.Where(p => p.ProductName.StartsWith("C"));
 
-            foreach (var item in data) {
+            foreach (var item in data)
+            {
                 item.Price = item.Price * 2;
             }
 
-            try {
+            try
+            {
                 db.SaveChanges();
             }
-            catch (DbEntityValidationException ex) {
+            catch (DbEntityValidationException ex)
+            {
                 throw ex;
             }
 
@@ -83,25 +96,30 @@ namespace MVC5Course.Controllers {
 
 
         // GET: CRUD/Edit/5
-        public ActionResult Edit(int id) {
+        public ActionResult Edit(int id)
+        {
             return View();
         }
 
         // POST: CRUD/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection) {
-            try {
+        public ActionResult Edit(int id, FormCollection collection)
+        {
+            try
+            {
                 // TODO: Add update logic here
 
                 return RedirectToAction("Index");
             }
-            catch {
+            catch
+            {
                 return View();
             }
         }
 
         // GET: CRUD/Delete/5
-        public ActionResult Delete(int id) {
+        public ActionResult Delete(int id)
+        {
             var client = db.Client.Find(id);
 
             //var orders = db.Order.Where(p => p.ClientId == id);
@@ -117,7 +135,8 @@ namespace MVC5Course.Controllers {
             //db.Order.RemoveRange(client.Order.ToList());
 
 
-            foreach (var order in client.Order.ToList()) {
+            foreach (var order in client.Order.ToList())
+            {
                 db.OrderLine.RemoveRange(order.OrderLine);
             }
 
@@ -133,13 +152,16 @@ namespace MVC5Course.Controllers {
 
         // POST: CRUD/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection) {
-            try {
+        public ActionResult Delete(int id, FormCollection collection)
+        {
+            try
+            {
                 // TODO: Add delete logic here
 
                 return RedirectToAction("Index");
             }
-            catch {
+            catch
+            {
                 return View();
             }
         }

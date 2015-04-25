@@ -1,5 +1,5 @@
 【ASP.NET MVC 5 開發實戰】練習專案
-================================
+==================================
 
 使用工具
 --------
@@ -7,14 +7,22 @@
 * Visual Studio 2013 
     * [Visual Studio 2013 Update 4](http://www.microsoft.com/zh-tw/download/details.aspx?id=44921)
 	* [Web Essentials 2013 for Update 4](http://vswebessentials.com/)
-* SQL Server 2012 LocalDB
-	* 伺服器名稱: **``(localdb)\v11.0``**
 * SQL Server 2012 Management Studio
     * [CHT\x64\SQLManagementStudio_x64_CHT.exe](http://www.microsoft.com/zh-tw/download/details.aspx?id=29062)
- 
+* SQL Server 2012 LocalDB (SQL Server 11.0.3000)
+	* 伺服器名稱: **``(localdb)\v11.0``**
+	*  [SQL Server 2012 Express LocalDB (SqlLocalDB) 深入剖析](http://blog.miniasp.com/post/2012/09/03/SQL-Server-2012-Express-LocalDB-Quick-Start.aspx)
+* SQL Server 2014 LocalDB (SQL Server 12.0.2456.0)
+	* 伺服器名稱: **``(localdb)\MSSQLLocalDB``**
+* SQL Server Data Tools (SSDT) LocalDB (SQL Server 12.0.2000.8)
+	* 伺服器名稱: **``(localdb)\ProjectsV12``**
+* LocalDB 各版本示意圖
+<br>
+  ![image](https://cloud.githubusercontent.com/assets/88981/7217567/c189301c-e664-11e4-854c-106e1d64f11a.png)
 
-建立專案
---------
+
+建立 ASP.NET MVC 5 專案步驟說明
+-------------------------------
 
 1. [檔案] / [新增] / [專案]
 
@@ -72,6 +80,23 @@
   - 官網: http://owin.org/
 * Microsoft.Owin 3.0.0 (Katana)
   - 專案位址: http://katanaproject.codeplex.com/
+  - [其他 Katana 相關套件](http://katanaproject.codeplex.com/wikipage?title=Packages)
+  	- Microsoft.Owin.Host.SystemWeb<br>
+  	  OWIN server that enables OWIN-based applications to run on IIS using the ASP.NET request pipeline.
+	- Microsoft.Owin.Security<br>
+	  Common types which are shared by the various authentication middleware components.
+	- Microsoft.Owin.Security.Cookies<br>
+	  Middleware that enables an application to use cookie based authentication, similar to ASP.NET's forms authentication.
+	- Microsoft.Owin.Security.Facebook<br>
+	  Middleware that enables an application to support Facebook's OAuth 2.0 authentication workflow.
+	- Microsoft.Owin.Security.Google<br>
+	  Contains middlewares to support Google's OpenId and OAuth 2.0 authentication workflows.
+	- Microsoft.Owin.Security.MicrosoftAccount<br>
+	  Middleware that enables an application to support the Microsoft Account authentication workflow.
+	- Microsoft.Owin.Security.OAuth<br>
+	  Middleware that enables an application to support any standard OAuth 2.0 authentication workflow.
+	- Microsoft.Owin.Security.Twitter<br>
+	  Middleware that enables an application to support Twitter's OAuth 2.0 authentication workflow.
 
 ### [ 前端套件 ]
 
@@ -82,7 +107,9 @@
 	* 官網: http://jqueryvalidation.org/
 	* 專案位址: https://github.com/jzaefferer/jquery-validation 
 * Microsoft.jQuery.Unobtrusive.Validation 3.2.2
-	* 用來與 ASP.NET MVC 5 表單驗證功能搭配使用的 JS 函式庫  
+	* 用來與 ASP.NET MVC 5 表單驗證功能搭配使用的 JS 函式庫
+	* 套件位址: https://www.nuget.org/packages/Microsoft.jQuery.Unobtrusive.Validation/
+	* 版本說明: http://go.microsoft.com/fwlink/?LinkId=389866  
 * Bootstrap 3.0.0
 	* 官網: http://getbootstrap.com/
 * Modernizr 2.6.2

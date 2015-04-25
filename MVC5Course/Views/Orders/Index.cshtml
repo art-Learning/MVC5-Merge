@@ -38,7 +38,11 @@
             @Html.DisplayFor(modelItem => item.OrderStatus)
         </td>
         <td>
-            @Html.ActionLink(@item.Client.FirstName, "Details", "Clients", new { id=item.ClientId},null)
+            
+            @*<a href="/Clients/Details/@item.Client.ClientId">@item.Client.FirstName</a>*@
+            
+            @Html.ActionLink(item.Client.FirstName, "Details", "Clients", new { id = item.Client.ClientId }, null)
+
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.OrderId }) |
