@@ -12,10 +12,18 @@ namespace MVC5Course.Models
             return base.All().Where(x => x.isDelete == false);
         }
 
+        public override void Delete(Client entity)
+        {
+            entity.isDelete = true;
+
+            //base.Delete(entity);
+        }
+
         public Client Find(int id)
         {
             return this.All().Where(x => x.ClientId == id).FirstOrDefault();
         }
+        
 
 	}
 
