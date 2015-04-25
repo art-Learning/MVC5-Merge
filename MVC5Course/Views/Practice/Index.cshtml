@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "課程練習";
+}
+<h2>@ViewBag.Title</h2>
+<script>
+  $(function () {
+    $('#myTab a:last').tab('show')
+  })
+</script>
+<ul class="nav nav-tabs" role="tablist" id="myTab">
+    <li role="presentation" class="active"><a href="#Day1" aria-controls="Day1" role="tab" data-toggle="tab">Day1</a></li>
+    <li role="presentation"><a href="#Week1" aria-controls="Week1" role="tab" data-toggle="tab">Week1</a></li>
+    <li role="presentation"><a href="#Day3" aria-controls="Day3" role="tab" data-toggle="tab">Day3</a></li>
+    <li role="presentation"><a href="#Day4" aria-controls="Day4" role="tab" data-toggle="tab">Day4</a></li>
+    <li role="presentation"><a href="#Day5" aria-controls="Day5" role="tab" data-toggle="tab">Day5</a></li>
+    <li role="presentation"><a href="#Day6" aria-controls="Day6" role="tab" data-toggle="tab">Day6</a></li>
+</ul>
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="Day1">@Html.Partial("Day1")</div>
+    <div role="tabpanel" class="tab-pane" id="Week1">@Html.Partial("Week1")</div>
+    <div role="tabpanel" class="tab-pane" id="Day3"></div>
+    <div role="tabpanel" class="tab-pane" id="Day4"></div>
+    <div role="tabpanel" class="tab-pane" id="Day5"></div>
+    <div role="tabpanel" class="tab-pane" id="Day6"></div>
+</div>
+
