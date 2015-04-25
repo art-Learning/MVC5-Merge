@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using MVC5Course.Models;
 
 namespace MVC5Course.Controllers
-{
+{ 
     public class ClientsController : Controller
     {
         //private FabricsEntities db = new FabricsEntities();

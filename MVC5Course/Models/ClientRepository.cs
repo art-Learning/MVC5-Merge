@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
 	
 namespace MVC5Course.Models
 {   
@@ -8,24 +9,31 @@ namespace MVC5Course.Models
 	{
         public override IQueryable<Client> All()
         {
-            //取得尚未刪除資料
-            return base.All().Where(x => x.isDelete == false);
-        }
-
-        public override void Delete(Client entity)
-        {
-            entity.isDelete = true;
-
-            //base.Delete(entity);
+            return base.All().Where(x => x.isDelete);
         }
 
         public Client Find(int id)
         {
-            return this.All().Where(x => x.ClientId == id).FirstOrDefault();
+            return this.All().FirstOrDefault(p => p.ClientId == id);
         }
-        
 
-	}
+
+        public override void Delete(Client entity)
+        {
+            //client.IsDelete = true;
+
+            var db = ((FabricsEntities)this.UnitOfWork.Context);
+            foreach (var item in db.Order.ToList())
+            {
+                db.OrderLine.RemoveRange(item.OrderLine);
+            }
+            db.Order.RemoveRange(entity.Order);
+        }
+        internal IQueryable<Client> 抓首頁資料(int num)
+        {
+            return this.All().Take(num);
+        }
+    }
 
 	public  interface IClientRepository : IRepository<Client>
 	{

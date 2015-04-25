@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MVC5Course.Models;
 using System.Data.Entity.Validation;
-
+using MVC5Course.Models;
 namespace MVC5Course.Controllers
 {
     public class CRUDController : Controller
@@ -15,18 +14,18 @@ namespace MVC5Course.Controllers
         // GET: CRUD
         public ActionResult Index(string keyword, int limit = 10)
         {
-            //var data = db.Product.AsQueryable();
+            var data = db.Product.AsQueryable();
 
-            //if (!String.IsNullOrEmpty(keyword))
-            //{
-            //    data = data.Where(p => p.ProductName.StartsWith(keyword));
-            //}
+            if (!String.IsNullOrEmpty(keyword))
+            {
+                data = data.Where(p => p.ProductName.StartsWith(keyword));
+            }
 
-            //data = data.Take(limit);
+            data = data.Take(limit);
 
             //var data = db.Database.SqlQuery<Product>("SELECT TOP " + limit + " * FROM dbo.Product WHERE ProductName like @p0", keyword + "%").AsQueryable();
 
-            var data = db.QueryProduct().AsQueryable();
+            //var data = db.QueryProduct().AsQueryable();
 
             ViewBag.keyword = keyword;
 
