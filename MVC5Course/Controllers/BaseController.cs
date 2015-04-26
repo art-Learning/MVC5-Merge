@@ -13,6 +13,9 @@ namespace MVC5Course.Controllers
         protected FabricsEntities db = new FabricsEntities();
         protected ClientRepository repoClient = RepositoryHelper.GetClientRepository();
         protected OccupationRepository repoOccupation = RepositoryHelper.GetOccupationRepository();
+        protected ProductRepository repoProduct = RepositoryHelper.GetProductRepository();
+
+
 #if DEBUG
         public ActionResult Debug()
         {

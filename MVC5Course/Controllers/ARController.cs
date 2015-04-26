@@ -42,9 +42,13 @@ namespace MVC5Course.Controllers
         public ActionResult JSON()
         {
             //防止序列化錯誤
-            db.Configuration.LazyLoadingEnabled = false;
-            var product = db.Product.Take(10);
-            return Json(product, JsonRequestBehavior.AllowGet);
+            //db.Configuration.LazyLoadingEnabled = false;
+            //var product = db.Product.Take(10);
+
+            repoProduct.UnitOfWork.LazyLoadingEnabled = false;
+            var repo = repoProduct.All().Take(10);
+
+            return Json(repo, JsonRequestBehavior.AllowGet);
         }
 
     }
