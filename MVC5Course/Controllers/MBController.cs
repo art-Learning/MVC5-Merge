@@ -106,5 +106,18 @@ namespace MVC5Course.Controllers
             //由中斷點檢查所接到的資料內容
             return Content("請由中斷點檢查所接到的資料內容");
         }
+        public ActionResult Complex5()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Complex5(FormCollection frm)
+        {
+            Simple1MBViewModel item = new Simple1MBViewModel();
+            if(TryUpdateModel<Simple1MBViewModel>(item)){
+                return RedirectToAction("Complex5");
+            }
+            return View(item);
+        }
     }
 }
