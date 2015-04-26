@@ -12,9 +12,19 @@ namespace MVC5Course.Controllers
         {
             return View();
         }
-        public ActionResult Oops()
+
+        [HandleError(Master="",ExceptionType=typeof(ArgumentException),View="Error.Argument")]
+        public ActionResult Oops(string type="")
         {
-            throw new Exception("自訂錯誤發生!!");
+            if (type == "1")
+            {
+                throw new ArgumentException("參數錯誤發生!!");
+            }
+            else
+            {
+                throw new Exception("自訂錯誤發生!!");
+            }
+            
         }
     }
 }

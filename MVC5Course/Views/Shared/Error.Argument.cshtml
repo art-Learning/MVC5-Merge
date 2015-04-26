@@ -1,0 +1,10 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "錯誤";
+}
+
+<h1 class="text-danger">@Model.ControllerName.ToUpper() / @Model.ActionName.ToUpper() 的Argument錯誤。 <small>處理您的要求時發生錯誤</small></h1>
+<pre>@Model.Exception.Message</pre>
+
+

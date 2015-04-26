@@ -47,3 +47,11 @@
     <li>延遲驗證：TryUpdateModel</li>
     <li>MVC預設EDIT範本有問題，若某欄位不須出現在UI讓使用者修改，則UPDATE回資料庫也會因為Binding的關係把DB內的值給覆蓋掉，此時應利用延遲驗證的包含欄位來做處理特定欄位的更新</li>
 </ol>
+<h3>1525 <small>延遲驗證實作</small></h3>
+<h3>1630 <small>動作方法選擇器</small></h3>
+<h3>1700 <small>自訂錯誤頁面</small></h3>
+<ol>
+    <li>Web.Config要開啟customErrors mode為on</li>
+    <li>可在shared或各自controller目錄內建立ERROR.cshtml</li>
+    <li>可自訂某些錯誤，跑某些特定View，藉由HandleError處理</li>
+</ol>
