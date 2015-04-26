@@ -76,5 +76,35 @@ namespace MVC5Course.Controllers
                  + " | "
                  + item2.username + ":" + item2.password);
         }
+        public ActionResult Complex3()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Complex3(
+            [Bind(Prefix="item1")]
+            Simple1MBViewModel frm)
+        {
+            return Content(String.Format("UserName:[{0}] Password:[{1}]", frm.username, frm.password));
+        }
+
+        public ActionResult Complex4()
+        {
+            var data = from p in db.Client
+                       select new Simple1MBViewModel()
+                       {
+                           username = p.FirstName,
+                           password = p.LastName,
+                           age = 18
+                       };
+            return View(data.Take(10));
+        }
+
+        [HttpPost]
+        public ActionResult Complex4(IList<Simple1MBViewModel> item)
+        {
+            //由中斷點檢查所接到的資料內容
+            return Content("請由中斷點檢查所接到的資料內容");
+        }
     }
 }

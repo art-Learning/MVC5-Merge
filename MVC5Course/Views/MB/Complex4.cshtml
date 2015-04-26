@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MVC5Course.ViewModel.Simple1MBViewModel>
+
+@using (Html.BeginForm())
+{
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.age)
+        </th>
+    </tr>
+    @{
+        var item = Model.ToArray();
+    }
+    @for (int i = 0; i < item.Length; i++)
+    {
+
+    <tr>
+        <td>
+            @Html.EditorFor(modelItem => item[i].username)
+        </td>
+        <td>
+            @Html.EditorFor(modelItem => item[i].password)
+        </td>
+        <td>
+            @Html.EditorFor(modelItem => item[i].age)
+        </td>
+    </tr>
+    }
+
+</table>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Update" class="btn btn-default" />
+    </div>
+</div>
+
+}

@@ -1,0 +1,58 @@
+﻿@model MVC5Course.ViewModel.Simple1MBViewModel
+@{
+    var item1 = new MVC5Course.ViewModel.Simple1MBViewModel();
+}
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Simple1MBViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => item1.username, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => item1.username, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => item1.username, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => item1.password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => item1.password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => item1.password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => item1.confirmpass, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => item1.confirmpass, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => item1.confirmpass, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => item1.age, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => item1.age, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => item1.age, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
