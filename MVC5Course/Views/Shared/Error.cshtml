@@ -4,6 +4,7 @@
     ViewBag.Title = "錯誤";
 }
 
-<h1 class="text-danger">錯誤。</h1>
-<h2 class="text-danger">處理您的要求時發生錯誤。</h2>
+<h1 class="text-danger">@Model.ControllerName.ToUpper() / @Model.ActionName.ToUpper() 錯誤。 <small>處理您的要求時發生錯誤</small></h1>
+<pre>@Model.Exception.Message</pre>
+
 
