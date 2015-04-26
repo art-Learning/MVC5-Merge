@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace MVC5Course.Controllers
 {
-    public class ARController : Controller
+    public class ARController : BaseController
     {
         // GET: AR
         public ActionResult Index()
@@ -37,6 +37,14 @@ namespace MVC5Course.Controllers
             
             //return File(Server.MapPath("~/Content/test.html"),"text/plain");
             return File(Server.MapPath("~/Content/test.html"), "text/html");
+        }
+
+        public ActionResult JSON()
+        {
+            //防止序列化錯誤
+            db.Configuration.LazyLoadingEnabled = false;
+            var product = db.Product.Take(10);
+            return Json(product, JsonRequestBehavior.AllowGet);
         }
 
     }

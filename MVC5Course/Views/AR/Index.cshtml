@@ -1,0 +1,9 @@
+﻿<button onclick="getdate();">JSON資料取得</button>
+
+<script>
+    function getdate() {
+        $.getJSON("/AR/JSON", null, function (d) {
+            console.log(d);
+        })
+    }
+</script>

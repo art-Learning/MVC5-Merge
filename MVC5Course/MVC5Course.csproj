@@ -405,6 +405,8 @@
     <Content Include="Views\Practice\Day3.cshtml" />
     <Content Include="Views\ExtraInfo\ExtraInfoDay4.cshtml" />
     <Content Include="Views\Note\Day4.cshtml" />
+    <Content Include="Views\AR\Index.cshtml" />
+    <Content Include="Views\Practice\Day2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
@@ -432,7 +434,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AR\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -31,3 +31,38 @@
     <li>同步處理-->開啟檔案總管-->Git資料夾-->找到config-->修改URL-->指定.git專案路徑</li>
     <li>git push -u origin master</li>
 </ol>
+<h3>1320</h3>
+<b>自訂欄位驗證</b>
+<ol>
+    <li>建立MODEL下的新類別，如NumberCheckAttribute</li>
+    <li>該類別繼承DataTypeAttribute</li>
+    <li>複寫IsValid方法，實作驗證判斷</li>
+    <li>若傳入Null直，因SRP原則，建議由[Required]處理，所以回傳True、False皆可，但用True實務上會較好找錯誤</li>
+</ol>
+<h3>1410</h3>
+<b>模型驗證(商業邏輯)</b>
+<ol>
+    <li>Partial class 繼承 IValidatbleObject</li>
+    <li>實作介面(使用智慧標籤可快速產生框架)</li>
+    <li>透過this指定Model屬性</li>
+    <li>商業邏輯處理</li>
+    <li>回傳yield return new ValidationResult("xxxxx",new string[]{'欄位名稱'})</li>
+</ol>
+<h3>1500</h3>
+<b>路由、生命週期</b>
+<ol>
+    <li>練習變更路由/jQuery.Each/</li>
+    <li>/Docs/jQuery-Each/</li>
+    <li>RouteExistingFiles，若加上此屬性則效能會很差，一份網頁可能就有好幾個request比對路由(CSS、PIC)</li>
+    <li>預設路由最好放最下面，路由的參數ID直可使用Regex進行過濾檢查</li>
+</ol>
+<h3>1610</h3>
+<b>Controller</b>
+<ol>
+    <li>條件式編譯</li>
+    <li>abstract：作為其他類別的基底類別</li>
+</ol>
+<ol>
+    <li>變更Razor、WebForm的VIEW查找方式，在global.asax將所有規則clear再新增Razor的回去</li>
+    <li>View用法：部分檢視、回傳Content</li>
+</ol>
