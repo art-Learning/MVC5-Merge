@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVC5Course.ViewModel;
 
 namespace MVC5Course.Controllers
 {
@@ -30,6 +31,36 @@ namespace MVC5Course.Controllers
             ViewBag.MSG2 = TempData["MSG2"];
             ViewBag.MSG3 = Session["MSG3"];
             return View();
+        }
+
+        public ActionResult Simple1()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Simple1(string username,string password)
+        {
+            return Content(String.Format("UserName:[{0}] Password:[{1}]", username, password));
+        }
+        public ActionResult Simple2(){
+        
+            return View("Simple1");
+        }
+
+        [HttpPost]
+        public ActionResult Simple2(FormCollection frm1)
+        {
+            return Content(String.Format("UserName:[{0}] Password:[{1}]", frm1["username"], frm1["password"]));
+        }
+        [HttpPost]
+        public ActionResult Complex1(Simple1MBViewModel frm)
+        {
+            return Content(String.Format("UserName:[{0}] Password:[{1}]", frm.username, frm.password));
+        }
+        public ActionResult Complex1()
+        {
+            return View("Simple1");
         }
     }
 }

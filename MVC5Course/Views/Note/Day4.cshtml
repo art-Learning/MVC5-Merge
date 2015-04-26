@@ -12,3 +12,32 @@
 <ol>
     <li>序列化過程錯誤是因為導覽屬性重複互相參考到，關閉延遲載入功能可解決此一問題</li>
 </ol>
+<h3>1100 <small>IIS網頁回應錯誤訊息</small></h3>
+<b>SEO and HTTP 301 、302</b>
+<ol>
+    <li>HTTP301轉址：永久(搜尋引擎判定為同一個網址，SEO相關資訊會累加到新網址)</li>
+    <li>HTTP302轉址：暫時(搜尋引擎判定為兩個網址)</li>
+</ol>
+<h3>1125</h3>
+<b>Model Binding</b>
+<ol>
+    <li>弱型別轉型回強型別</li>
+    <li>ViewData["MyClient"] as MVC5.Models.Client</li>
+</ol>
+<b>TempData實務應用</b>
+<ol>
+    <li>表單頁輸入資料POST到處理頁</li>
+    <li>處理頁接資料處理完後寫入TempData並redirect到完成頁</li>
+    <li>完成頁顯示TempData</li>
+</ol>
+<h3>1300 <small>Model Binding</small></h3>
+<b>簡單模型</b>
+<ol>
+    <li>string</li>
+    <li>FormCollection</li>
+</ol>
+<b>複雜模型</b>
+<ol>
+    <li>透過ViewModel來接資料</li>
+    <li>表單內有多個物件要接，使用PreFix語法命名Name標籤內的屬性，例如username改為item1.username</li>
+</ol>
