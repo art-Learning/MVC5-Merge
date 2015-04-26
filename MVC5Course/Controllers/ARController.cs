@@ -15,10 +15,14 @@ namespace MVC5Course.Controllers
             return View();
         }
 
-        public ActionResult File1()
+        public ActionResult File1(string url)
         {
+            if (String.IsNullOrEmpty(url))
+            {
+                url = "http://www.imageshop.com.tw/pic/shop/home/men-world.jpg";
+            }
             WebClient wc = new WebClient();
-            byte[] content = wc.DownloadData("http://www.imageshop.com.tw/pic/shop/home/men-world.jpg");
+            byte[] content = wc.DownloadData(url);
             return File(content, "image/jpeg");
         }
         public ActionResult File2()
@@ -51,5 +55,25 @@ namespace MVC5Course.Controllers
             return Json(repo, JsonRequestBehavior.AllowGet);
         }
 
+
+        public ActionResult redir302()
+        {
+            //HTTP 302 example
+            return RedirectToAction("File1", "AR", new { url = "http://www.imageshop.com.tw/pic/shop/home/men-world.jpg" });
+        }
+        public ActionResult redir301()
+        {
+            //HTTP 301 example
+            return RedirectToActionPermanent("File1", "AR", new { url = "http://www.imageshop.com.tw/pic/shop/home/men-world.jpg" });
+        }
+
+        public ActionResult Page404()
+        {
+            return HttpNotFound();
+        }
+        public ActionResult Page400()
+        {
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
     }
 }
