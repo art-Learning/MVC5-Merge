@@ -81,11 +81,15 @@ namespace MVC5Course.Controllers
         {
             //改為延遲驗證
             //if (ModelState.IsValid)
-            Product product = db.Product.Find(id);
+            //Product product = db.Product.Find(id);
+            
+            //改為倉儲模式
+            Product product = repoProduct.Find(id);
             if (TryUpdateModel<Product>(product, new string[] { "ProductName", "Price", "Stock" }))
             {
                 //db.Entry(product).State = EntityState.Modified;
-                db.SaveChanges();
+                //db.SaveChanges();
+                repoProduct.UnitOfWork.Commit();
                 return RedirectToAction("Index");
             }
             return View(product);

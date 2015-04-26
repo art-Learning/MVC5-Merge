@@ -6,8 +6,11 @@ namespace MVC5Course.Models
 {   
 	public  class ProductRepository : EFRepository<Product>, IProductRepository
 	{
-
-	}
+        public Product Find(int id)
+        {
+            return base.All().FirstOrDefault(p => p.ProductId==id);
+        }
+    }
 
 	public  interface IProductRepository : IRepository<Product>
 	{
