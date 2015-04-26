@@ -6,6 +6,9 @@ using System.Web;
 
 namespace MVC5Course.Models
 {
+    //欄位驗證，新加入一個類別，繼承DataTypeAttribute
+    //複寫isValid方法，進行判斷處理
+
     public class NumberCheckAttribute : DataTypeAttribute
     {
         public NumberCheckAttribute() : base("NumberCheck")
@@ -26,10 +29,6 @@ namespace MVC5Course.Models
             {
                 return false;
             }
-
-
-            
-            
         }
     }
 }

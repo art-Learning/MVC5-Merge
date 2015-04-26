@@ -62,5 +62,19 @@ namespace MVC5Course.Controllers
         {
             return View("Simple1");
         }
+
+        public ActionResult Complex2()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Complex2(Simple1MBViewModel item1, Simple1MBViewModel item2)
+        {
+            return Content("Complex2: "
+                 + item1.username + ":" + item1.password
+                 + " | "
+                 + item2.username + ":" + item2.password);
+        }
     }
 }

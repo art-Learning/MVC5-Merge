@@ -9,6 +9,7 @@ namespace MVC5Course.Models
     {
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
+            //模型驗證規則
             if (this.Price < 2000)
             {
                 yield return new ValidationResult("商品金額過低，請重新設定", new string[] { "Price" });
