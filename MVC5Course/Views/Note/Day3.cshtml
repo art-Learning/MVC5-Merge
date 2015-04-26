@@ -1,2 +1,33 @@
-﻿
-待補
+﻿<h3>0900</h3>
+<b>DB若未建立FK，程式開發端處理步驟</b>
+<ol>
+    <li>正式DB倒一份到本機DB</li>
+    <li>本機DB把該拉的關聯都建好後，產生EDMX</li>
+    <li>透過此EDMX進行程式開發</li>
+    <li>開發完程式佈署到正式機一樣可以運作</li>
+</ol>
+<h3>0945 <small>設計模式：倉儲模式產生器</small></h3>
+<b>Repository</b>
+<ol>
+    <li>取得Repo物件(透過RepositoryHelper先new一個出來)</li>
+    <li>透過該物件的方法new一個所需的類別</li>
+    <li>調用資料就使用repo物件內的all()方法</li>
+    <li>關於資料的操作，邏輯都可以寫在這個repo物件類別內。</li>
+    <li>需要資料的地方，一律改使用repo物件取得</li>
+    <li>UnitOfWork底下的commit相當於db.savechanges()</li>
+    <li>UnitOfWork的context就相當於db的Entity</li>
+</ol>
+<h3>1145 <small>metadata擴充類別(model)</small></h3>
+<b>ERGeneratePartialClass.TT</b>
+<ol>
+    <li>透過TT檔產生，僅適合在第一次建構這些類別時使用。</li>
+    <li>EDMX欄位有異動，擴充類別也須人工處理補上</li>
+    <li>透過程式碼產生器產生，原因是因為宣告了類別為部分類別，所以可以跟EDMX的類別有相關</li>
+    <li>且透過MetadataType屬性，再將擴充的驗證連結到類別</li>
+</ol>
+<h3>1200</h3>
+<b>GitHub Tips</b>
+<ol>
+    <li>同步處理-->開啟檔案總管-->Git資料夾-->找到config-->修改URL-->指定.git專案路徑</li>
+    <li>git push -u origin master</li>
+</ol>

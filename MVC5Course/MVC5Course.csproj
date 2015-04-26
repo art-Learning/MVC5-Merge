@@ -184,6 +184,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ARController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
@@ -303,6 +304,7 @@
     <Content Include="Content\aspnet200x200_large_large.gif" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\test.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -334,6 +336,8 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EFGeneratePartialClass.cs</LastGenOutput>
     </Content>
+    <Content Include="Content\EFGeneratePartialClass.rar" />
+    <Content Include="Content\IRepository.EF6.rar" />
     <None Include="Scripts\jquery-1.11.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.2.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
@@ -395,6 +399,12 @@
     <Content Include="Views\jQuery\each.cshtml" />
     <Content Include="Views\Shared\Debug.cshtml" />
     <Content Include="Views\Shared\AlertRedirect.cshtml" />
+    <Content Include="Views\ExtraInfo\ExtraInfoDay3.cshtml" />
+    <Content Include="Views\ExtraInfo\ExtraInfoday2.cshtml" />
+    <Content Include="Views\Practice\Day4.cshtml" />
+    <Content Include="Views\Practice\Day3.cshtml" />
+    <Content Include="Views\ExtraInfo\ExtraInfoDay4.cshtml" />
+    <Content Include="Views\Note\Day4.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
@@ -422,6 +432,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AR\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
