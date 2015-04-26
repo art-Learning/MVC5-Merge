@@ -191,6 +191,7 @@
     <Compile Include="Controllers\ExtraInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\jQueryController.cs" />
+    <Compile Include="Controllers\MBController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\PracticeController.cs" />
@@ -407,6 +408,8 @@
     <Content Include="Views\Note\Day4.cshtml" />
     <Content Include="Views\AR\Index.cshtml" />
     <Content Include="Views\Practice\Day2.cshtml" />
+    <Content Include="Views\MB\DataTransResult.cshtml" />
+    <Content Include="Views\MB\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">

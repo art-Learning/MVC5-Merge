@@ -1,0 +1,16 @@
+﻿@model MVC5Course.Models.Client
+
+
+
+<h3>Model 強型別測試</h3>
+
+Client Model First Name = @Model.FirstName
+
+<h3>Model 透過ViewData傳遞弱型別進入View後再轉型強型別</h3>
+
+@{
+    var product = ViewData["product"] as MVC5Course.Models.Product;
+    
+}
+
+Product Name = @product.ProductName
