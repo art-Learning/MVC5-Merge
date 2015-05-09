@@ -6,6 +6,8 @@
 
 <h2>Index</h2>
 
+@Html.DropDownList("MenuGender", ViewBag.SelGender as SelectList, "--請選擇--", new { onchange = "location.search='?gender='+$('#MenuGender').val();" })
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>

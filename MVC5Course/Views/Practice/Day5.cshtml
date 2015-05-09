@@ -1,11 +1,12 @@
 ﻿<ol>
-    <li>練習自訂 @Html.ActionLink("ActionFilter", "index", "Clients") 動作過濾器</li>
-    <li>練習安裝與使用 @Html.ActionLink("Glimpse", "index", "Clients") 幫助偵錯 ASP.NET MVC 應用程式</li>
-    <li>用 Razor 輸出 ViewBag.num = new int[] { 1,2,3,4,5 } 陣列的內容：@Html.ActionLink("View","index","View")</li>
-    <li>練習 ASP.NET MVC Layout @Html.ActionLink("套版","index","Metro")</li>
+    <li>練習自訂 @Html.ActionLink("ActionFilter", "index", "Clients", null, new { target = "_blank" }) 動作過濾器</li>
+    <li>練習安裝與使用 @Html.ActionLink("Glimpse", "index", "Clients", null, new { target = "_blank" }) 幫助偵錯 ASP.NET MVC 應用程式</li>
+    <li>用 Razor 輸出 ViewBag.num = new int[] { 1,2,3,4,5 } 陣列的內容：@Html.ActionLink("View", "index", "View", null, new { target = "_blank" })</li>
+    <li>練習 ASP.NET MVC Layout @Html.ActionLink("套版", "index", "Metro", null, new { target = "_blank" })</li>
     <li>練習將預設命名空間加入到 Views\web.config 之中</li>
-    <li>練習 @@Html.Action 將 /Orders/Index 的輸出插入到 /Clients/Details 頁面下方 @Html.ActionLink("Nicole的明細資料", "Details", "Clients", new { ID = 1 }, null) </li>
-    <li>練習 @@Html.Partial 將 /Orders/Index.cshtml 的輸出插入到 /Clients/Details 頁面下方 @Html.ActionLink("Nicole的明細資料", "Details", "Clients", new { ID = 1 }, null)</li>
+    <li>練習 @@Html.Action 將 /Orders/Index 的輸出插入到 /Clients/Details 頁面下方 @Html.ActionLink("Nicole的明細資料", "Details", "Clients", new { ID = 1 }, new { target = "_blank" }) </li>
+    <li>練習 @@Html.Partial 將 /Orders/Index.cshtml 的輸出插入到 /Clients/Details 頁面下方 @Html.ActionLink("Nicole的明細資料", "Details", "Clients", new { ID = 1 }, new {target="_blank" })</li>
+    <li>練習使用 @@Html.DropDownList 設計下拉選單：@Html.ActionLink("Clients的列表加入選單", "index", "Clients", null, new { target = "_blank" })</li>
 </ol>
 
 
