@@ -610,6 +610,7 @@
     <Content Include="Views\Metro\Index.cshtml" />
     <Content Include="Views\Metro\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.Metro.cshtml" />
+    <Content Include="Views\Shared\OrderListPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">

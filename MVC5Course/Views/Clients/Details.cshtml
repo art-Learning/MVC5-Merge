@@ -122,7 +122,7 @@
             @Html.DisplayFor(model => model.Latitude)
         </dd>
 
-       
+
         <dt>
             @Html.DisplayNameFor(model => model.Occupation.OccupationName)
         </dt>
@@ -133,7 +133,12 @@
     </dl>
 
     <h3>Client's Order List</h3>
-    @Html.Action("index", "Orders", new { ClientID=Model.ClientId })
+
+    @* 1.使用Action *@
+    @*@Html.Action("index", "Orders", new { ClientID = Model.ClientId })*@
+
+    @* 2.使用Partial *@
+    @Html.Partial("OrderListPartial", Model.Order.ToList())
 
 </div>
 <p>
