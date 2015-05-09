@@ -614,6 +614,7 @@
     <Content Include="Views\Clients\SearchCity.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Client.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Client.簡單版.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\GoogleMaps.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
@@ -642,6 +643,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AF\" />
+    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
