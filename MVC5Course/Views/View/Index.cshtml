@@ -1,0 +1,21 @@
+﻿@{
+    var NumArray = ViewBag.NumArray;
+    foreach (var n in NumArray)
+    {
+        @n
+    }
+}
+
+
+@{
+    foreach (var n in NumArray){@n<text> </text>}
+}
+
+
+<ul>
+    @{
+        foreach (var n in NumArray)
+        {
+  <li>@n</li>
+        }
+    }</ul>
