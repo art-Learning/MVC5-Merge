@@ -45,6 +45,20 @@ namespace MVC5Course.Controllers
             return View(client.ToList());
         }
 
+        public ActionResult SearchCity(string City)
+        {
+            var client = repoClient.SearchCity(City).Take(10);
+
+            ViewData.Model = client.ToList();
+
+            var cityList = repoClient.All().Select(p => new { p.City }).Distinct().ToList();
+
+            ViewBag.Cities = new SelectList(cityList, "City", "City", City);
+
+
+            return View(client.ToList());
+        }
+
         // GET: Clients/Details/5
         public ActionResult Details(int? id)
         {

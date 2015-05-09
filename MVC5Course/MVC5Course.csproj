@@ -611,6 +611,7 @@
     <Content Include="Views\Metro\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.Metro.cshtml" />
     <Content Include="Views\Shared\OrderListPartial.cshtml" />
+    <Content Include="Views\Clients\SearchCity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">

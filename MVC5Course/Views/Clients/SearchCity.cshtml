@@ -4,9 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>SearchCity</h2>
 
-@Html.DropDownList("MenuGender", ViewBag.SelGender as SelectList, "--請選擇--", new { onchange = "location.search='?gender='+$('#MenuGender').val();" })
+@Html.DropDownList("Cities1", ViewBag.Cities as SelectList, "--請選擇城市--", new { onchange = "location.search = '?city=' + $('#Cities1').val();" })
+
 
 <p>
     @Html.ActionLink("Create New", "Create")
