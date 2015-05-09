@@ -319,6 +319,7 @@
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\Simple1MBViewModel.cs" />
+    <Compile Include="Views\MetroController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\1.jpg" />
@@ -605,6 +606,9 @@
     <Content Include="Views\Note\Day5.cshtml" />
     <Content Include="Views\ExtraInfo\ExtraInfoDay5.cshtml" />
     <Content Include="Views\View\Index.cshtml" />
+    <Content Include="Views\Metro\Index.cshtml" />
+    <Content Include="Views\Metro\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.Metro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
