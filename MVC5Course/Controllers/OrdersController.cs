@@ -13,9 +13,13 @@ namespace MVC5Course.Controllers
     public class OrdersController : BaseController
     {
         // GET: Orders
-        public ActionResult Index()
+        public ActionResult Index(int ClientID = 0)
         {
             var order = db.Order.Include(o => o.Client);
+            if (ClientID > 0)
+            {
+                order = db.Order.Where(o => o.ClientId == ClientID);
+            }
             return View(order.ToList());
         }
 
