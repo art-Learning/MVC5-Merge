@@ -170,6 +170,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFliters\LoggerAttribute.cs" />
     <Compile Include="App_GlobalResources\Products.en-US.designer.cs">
       <DependentUpon>Products.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -419,6 +420,9 @@
     <Content Include="Views\MB\Complex4.cshtml" />
     <Content Include="Views\MB\Complex5.cshtml" />
     <Content Include="Views\Shared\Error.Argument.cshtml" />
+    <Content Include="Views\Practice\Day5.cshtml" />
+    <Content Include="Views\Note\Day5.cshtml" />
+    <Content Include="Views\ExtraInfo\ExtraInfoDay5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
