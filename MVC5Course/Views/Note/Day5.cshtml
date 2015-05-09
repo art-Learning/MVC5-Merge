@@ -6,3 +6,30 @@
     <li>繼承ActionFilterAttribute</li>
     <li>Override原有的動作過濾器方法</li>
 </ol> 
+
+<h3>1000</h3>
+Razor介紹、練習，原始宣告數字陣列給View，接收呈現結果須如下顯示
+<ol>
+    <li>12345</li>
+    <li>1 2 3 4 5</li>
+    <li>利用UL LI做1到5</li>
+</ol>
+
+<h3>1100</h3>
+Razor頁面執行順序
+<ol>
+    <li>/Views/_ViewStart.cshtml</li>
+    <li>/Views/Home/Index.cshtml</li>
+    <li>/Views/Shared/_Layout.cshtml</li>
+</ol>
+<h3>套版步驟</h3>
+<ol>
+    <li>取得必要檔案加入專案，如CSS、IMG、JS</li>
+    <li>將要套用版型html加入專案顯示</li>
+    <li>建Controller</li>
+    <li>建Action，使用版型頁</li>
+    <li>清空View後將html複製過來</li>
+    <li>修正View相對路徑，如img、js、css</li>
+    <li>測試執行確認是否有誤，無誤後進行切版動作，分為版型(放到_layout)、頁面主體(放到action view內)</li>
+    <li>分別測試後確認無誤，在view主體使用該版型</li>
+</ol>
