@@ -2,11 +2,16 @@
     ViewBag.Title = "Topic";
 }
 
+@helper Blue(string text)
+{
+    <span style="color: rgb(24, 116, 205); font-size: 15px;">@text</span>
+}
+
 <h2>課程主題</h2>
 <ul>
     <li>
-        <span style="color: rgb(24, 116, 205); font-size: 15px;">第一天 (4/18)：新手上路初體驗</span>
-
+        @MyHelper.BlueColor("第一天 ")
+        @Blue("(4/18)：新手上路初體驗")
         <ul>
             <li>熟悉 Visual Studio 2013 開發環境</li>
             <li>瞭解 ASP.NET MVC 網站開發流程</li>
