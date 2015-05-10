@@ -7,9 +7,16 @@
 
 
 @Ajax.ActionLink("取得時間", "GetTime", new AjaxOptions() { UpdateTargetId = "now" })
-
+<div id="now"></div>
 <hr />
 
-<div id="now">
-
-</div>
+@Ajax.ActionLink("取得JSON", "GetJson", new AjaxOptions() { 
+    HttpMethod="post",
+    OnSuccess="showResult"
+})
+<script>
+    function showResult(data) {
+        alert(data.result);
+    }
+</script>
+<hr />
