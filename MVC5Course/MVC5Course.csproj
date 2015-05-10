@@ -620,6 +620,8 @@
     <Content Include="Views\Shared\DisplayTemplates\GoogleMaps.cshtml" />
     <Content Include="Views\AJAX\Index.cshtml" />
     <Content Include="Views\Practice\Day6.cshtml" />
+    <Content Include="Views\ExtraInfo\ExtraInfoDay6.cshtml" />
+    <Content Include="Views\Note\Day6.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
