@@ -17,3 +17,9 @@
     <li>啟用最佳化會優先選擇min.js</li>
     <li>停用最佳化不會載入min.js</li>
 </ol>
+<h3>1145 <small>PagedList.Mvc分頁套件</small></h3>
+<ol>
+    <li>下載Nuget套件PagedList</li>
+    <li>Controller套用分頁設定：.ToPagedList(pageNumber:1,pageSize:10)，取得資料需進行排序才可分頁</li>
+    <li>View套用分頁語法：@@Html.PagedListPager()，記得Using PagedList、PagedList.MVC；且先將Mode轉型為IPageList</li>
+</ol>

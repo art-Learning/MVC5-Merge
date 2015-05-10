@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Client>
-
+@using PagedList
+@using PagedList.Mvc
 @{
     ViewBag.Title = "Index";
 }
@@ -66,6 +67,11 @@
 
 </table>
 
+@{
+    var data = Model as IPagedList<Client>;
+}
+
+@Html.PagedListPager(data, page => Url.Action("Index", new {PageNo = page }))
 
 <div id="info">
 

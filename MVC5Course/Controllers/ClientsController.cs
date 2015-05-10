@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using MVC5Course.Models;
 using MVC5Course.ActionFliters;
+using PagedList;
 
 namespace MVC5Course.Controllers
 { 
@@ -28,11 +29,11 @@ namespace MVC5Course.Controllers
         }
 
         // GET: Clients
-        public ActionResult Index(string Gender="M")
+        public ActionResult Index(string Gender="M",int PageNo = 1)
         {
             //var client = repoClient.All().Take(10);
             //加入下拉選單，給予參數決定搜尋條件
-            var client = repoClient.Qry(Gender).Take(10);
+            var client = repoClient.Qry(Gender).ToPagedList(pageNumber: PageNo, pageSize: 10);
 
             //建立下拉選單
             var selItem = new List<SelectListItem>();
@@ -42,7 +43,7 @@ namespace MVC5Course.Controllers
             ViewData["SelGender"] = new SelectList(selItem, "Value", "Text",Gender);
 
 
-            return View(client.ToList());
+            return View(client);
         }
 
         public ActionResult SearchCity(string City)

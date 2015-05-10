@@ -9,22 +9,22 @@ namespace MVC5Course.Models
 	{
         public override IQueryable<Client> All()
         {
-            return base.All().Where(x => ! x.isDelete);
+            return base.All().Where(x => !x.isDelete);
         }
 
         public IQueryable<Client> Qry(string Gender)
         {
-            return base.All().Where(x => !x.isDelete && x.Gender == Gender);
+            return this.All().Where(x => x.Gender == Gender).OrderBy(x => x.ClientId);
         }
         public IQueryable<Client> SearchCity(string City)
         {
             if (String.IsNullOrEmpty(City))
             {
-                return base.All().Where(x => !x.isDelete);
+                return this.All();
             }
             else
            {
-               return base.All().Where(x => !x.isDelete && x.City == City);
+               return this.All().Where(x => x.City == City);
             }
         }
         public Client Find(int id)
