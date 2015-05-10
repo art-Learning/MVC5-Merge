@@ -44,3 +44,17 @@
 <ol>
     <li>發生序列化錯誤，是因為導覽屬性，循環參考關閉延遲載入 db.Configuration.LazyLoadingEnabled = false;</li>
 </ol>
+<h3>1450 <small>使用WebAPI的考量</small></h3>
+<ol>
+    <li>WebAPI跨平台、資料傳輸量小</li>
+    <li>缺點為JSON弱型別</li>
+</ol>
+
+<h3>1500 <small>使用T4程式碼範本快速開發</small></h3>
+<ol>
+    <li>專案根目錄下建立CodeTemplates目錄</li>
+    <li>預設範本路徑(VS2013)：C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\Microsoft\Web\Mvc\Scaffolding\Templates</li>
+    <li>若有不需要輸出的Model欄位：在MODEL欄位套用屬性[ScaffoldColumn(false)]</li>
+    <li>分頁：Controller加入PagedList擴充方法參數</li>
+    <li>檢視：View加入AJAX的分頁語法</li>
+</ol>

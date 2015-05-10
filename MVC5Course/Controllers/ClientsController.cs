@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -11,7 +11,7 @@ using MVC5Course.ActionFliters;
 using PagedList;
 
 namespace MVC5Course.Controllers
-{ 
+{
     [Logger]
     public class ClientsController : BaseController
     {
@@ -29,7 +29,7 @@ namespace MVC5Course.Controllers
         }
 
         // GET: Clients
-        public ActionResult Index(string Gender="M",int PageNo = 1)
+        public ActionResult Index(string Gender = "M", int PageNo = 1)
         {
             //var client = repoClient.All().Take(10);
             //加入下拉選單，給予參數決定搜尋條件
@@ -40,7 +40,7 @@ namespace MVC5Course.Controllers
             selItem.Add(new SelectListItem() { Value = "M", Text = "男生" });
             selItem.Add(new SelectListItem() { Value = "F", Text = "女生" });
 
-            ViewData["SelGender"] = new SelectList(selItem, "Value", "Text",Gender);
+            ViewData["SelGender"] = new SelectList(selItem, "Value", "Text", Gender);
 
 
             return View(client);
@@ -75,7 +75,7 @@ namespace MVC5Course.Controllers
             return View(client);
         }
 
-        
+
 
         // GET: Clients/Create
         public ActionResult Create()
