@@ -23,3 +23,9 @@
     <li>Controller套用分頁設定：.ToPagedList(pageNumber:1,pageSize:10)，取得資料需進行排序才可分頁</li>
     <li>View套用分頁語法：@@Html.PagedListPager()，記得Using PagedList、PagedList.MVC；且先將Mode轉型為IPageList</li>
 </ol>
+<h3>1310 <small>透過AJAX處理分頁</small></h3>
+<ol>
+    <li>View套用記得加上isAjax判斷Layout</li>
+    <li>HTML.PagedListPagert傳入第三個參數指定AJAX回來的資訊存放的DOM</li>
+    <li>在LAYOUT頁面加上該DOM名稱</li>
+</ol>

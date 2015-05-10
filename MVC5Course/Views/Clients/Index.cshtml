@@ -3,6 +3,7 @@
 @using PagedList.Mvc
 @{
     ViewBag.Title = "Index";
+    if (IsAjax) { Layout = ""; }
 }
 
 <h2>Index</h2>
@@ -56,10 +57,10 @@
             @Html.DisplayFor(modelItem => item.City)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ClientId }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.ClientId }) |
             @*@Html.ActionLink("Details", "Details", new { id=item.ClientId }) |*@
-            @Ajax.ActionLink("Details", "Details", "Clients", new { ID = item.ClientId }, new AjaxOptions { UpdateTargetId = "info" }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ClientId })
+            @Ajax.ActionLink("Details", "Details", "Clients", new { ID = item.ClientId }, new AjaxOptions{UpdateTargetId = "info"}) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ClientId })
         </td>
     </tr>
 }
@@ -71,7 +72,8 @@
     var data = Model as IPagedList<Client>;
 }
 
-@Html.PagedListPager(data, page => Url.Action("Index", new {PageNo = page }))
+@Html.PagedListPager(data, page => Url.Action("Index", new {PageNo = page }),
+    options:PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing("#Main"))
 
 <div id="info">
 
