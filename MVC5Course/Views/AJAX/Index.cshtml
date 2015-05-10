@@ -3,16 +3,14 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
 
 @Ajax.ActionLink("取得時間", "GetTime", new AjaxOptions() { UpdateTargetId = "now" })
 <div id="now"></div>
 <hr />
-
 @Ajax.ActionLink("取得JSON", "GetJson", new AjaxOptions() { 
     HttpMethod="post",
-    OnSuccess="showResult"
+    OnSuccess="showResult",
+    AllowCache=false,
 })
 <script>
     function showResult(data) {
@@ -20,3 +18,17 @@
     }
 </script>
 <hr />
+
+@Ajax.ActionLink("真的要取得時間嗎?", "GetTime", new AjaxOptions() { 
+    UpdateTargetId = "now2",
+    Confirm = "真的要取得時間嗎?",
+    OnBegin="eventBegin",
+    OnComplete = "eventComplete",
+    OnSuccess = "eventSuccess"
+})
+<script>
+    function eventBegin() { console.log("準備報時"); }
+    function eventComplete() { console.log("動作結束"); }
+    function eventSuccess() { console.log("報時結束");}
+</script>
+<div id="now2"></div>
