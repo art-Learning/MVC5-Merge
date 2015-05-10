@@ -220,6 +220,7 @@
     <Compile Include="Controllers\Clients1Controller.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\CRUDController.cs" />
+    <Compile Include="Controllers\EnumController.cs" />
     <Compile Include="Controllers\ExtraInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\jQueryController.cs" />
@@ -328,6 +329,7 @@
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\EnumViewModel.cs" />
     <Compile Include="ViewModel\Simple1MBViewModel.cs" />
     <Compile Include="Views\MetroController.cs" />
   </ItemGroup>
@@ -674,6 +676,10 @@
     <Content Include="Views\Clients1\Details.cshtml" />
     <Content Include="Views\Clients1\Edit.cshtml" />
     <Content Include="Views\Clients1\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Enum.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Enum-Radio.cshtml" />
+    <Content Include="Views\Enum\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
@@ -702,7 +708,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AF\" />
-    <Folder Include="Views\Shared\EditorTemplates\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
