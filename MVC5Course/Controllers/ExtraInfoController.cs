@@ -12,6 +12,7 @@ namespace MVC5Course.Controllers
         public ActionResult Index()
         {
             return View();
+            //TODO 補充資訊第六天的VIEW ( /Views/ExtraInfo/ExtraInfoDay6.cshtml)不見了，要找時間補上
         }
     }
 }
