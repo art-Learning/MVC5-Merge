@@ -566,6 +566,7 @@
     <Content Include="CodeTemplates\ODataControllerWithActions\Controller.cs.t4" />
     <Content Include="CodeTemplates\ODataControllerWithContext\Controller.cs.t4" />
     <Content Include="CodeTemplates\MvcControllerWithContext\Controller.cs.t4" />
+    <None Include="Properties\PublishProfiles\MVC5Course.pubxml" />
     <None Include="Scripts\jquery-1.11.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.2.js" />
     <Content Include="Scripts\jquery-1.11.2.min.js" />
@@ -581,7 +582,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="tasks.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -658,7 +658,6 @@
     <Content Include="Views\Shared\OrderListPartial.cshtml" />
     <Content Include="Views\Clients\SearchCity.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Client.cshtml" />
-    <Content Include="Views\Shared\DisplayTemplates\Client.簡單版.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\GoogleMaps.cshtml" />
     <Content Include="Views\AJAX\Index.cshtml" />
     <Content Include="Views\Practice\Day6.cshtml" />
@@ -672,6 +671,7 @@
     <Content Include="Views\Shared\EditorTemplates\Enum.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Enum-Radio.cshtml" />
     <Content Include="Views\Enum\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Client.簡單版.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Products.resx">
