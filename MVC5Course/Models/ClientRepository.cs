@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Data.Entity.Core.Objects;
@@ -44,7 +44,7 @@ namespace MVC5Course.Models
             }
             db.Order.RemoveRange(entity.Order);
         }
-        internal IQueryable<Client> §ì­º­¶¸ê®Æ(int num)
+        internal IQueryable<Client> æŠ“é¦–é è³‡æ–™(int num)
         {
             return this.All().Take(num);
         }
